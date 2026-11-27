@@ -1,0 +1,65 @@
+$portfolio-bg-dark: #111111;
+$portfolio-bg-surface: #1a1a1a;
+$portfolio-text-main: #f0f0f0;
+$portfolio-text-muted: #888888;
+$portfolio-accent-neutral: #666666;
+$portfolio-border-subtle: #2a2a2a;
+$portfolio-primary: #007bff; // Bleu moderne pour les accents
+$portfolio-secondary: #28a745; // Vert pour les succès
+$portfolio-warning: #ffc107; // Jaune pour les avertissements
+$portfolio-danger: #dc3545; // Rouge pour les erreurs
+$portfolio-font-base: 'Onest', 'Manrope', system-ui, sans-serif;
+$portfolio-font-display: 'Syne', 'Onest', system-ui, sans-serif;
+$portfolio-font-accent: 'Lexend', 'Onest', system-ui, sans-serif;
+$portfolio-font-mono: 'IBM Plex Mono', 'Cascadia Code', monospace;
+$breakpoint-mobile: 768px;
+$breakpoint-tablet: 1024px;
+$breakpoint-desktop: 1200px;
+$motion-fast: 0.2s ease;
+$motion-normal: 0.3s ease;
+$motion-slow: 0.5s ease;
+$radius-sm: 4px;
+$radius-md: 8px;
+$radius-lg: 12px;
+$radius-xl: 16px;
+$radius-round: 50%;
+
+:root {
+  --bg: #{$portfolio-bg-dark};
+  --bg-2: #{$portfolio-bg-surface};
+  --text: #{$portfolio-text-main};
+  --text-muted: #{$portfolio-text-muted};
+  --accent: #{$portfolio-accent-neutral};
+  --border: #{$portfolio-border-subtle};
+  --primary: #{$portfolio-primary};
+  --secondary: #{$portfolio-secondary};
+  --warning: #{$portfolio-warning};
+  --danger: #{$portfolio-danger};
+  --font: #{$portfolio-font-base};
+  --font-display: #{$portfolio-font-display};
+  --font-accent: #{$portfolio-font-accent};
+  --font-mono: #{$portfolio-font-mono};
+  --mobile: #{$breakpoint-mobile};
+  --tablet: #{$breakpoint-tablet};
+  --desktop: #{$breakpoint-desktop};
+  --transition-fast: #{$motion-fast};
+  --transition-normal: #{$motion-normal};
+  --transition-slow: #{$motion-slow};
+  --radius-small: #{$radius-sm};
+  --radius-medium: #{$radius-md};
+  --radius-large: #{$radius-lg};
+  --radius-xl: #{$radius-xl};
+  --radius-round: #{$radius-round};
+  --app-gutter: 14px;
+}
+@media (min-width: $breakpoint-mobile) {
+  :root { --app-gutter: 18px; }
+body.light-theme {
+  --bg: #f5f5f5;
+  --bg-2: #ffffff;
+  --text: #2c2c2c;
+  --text-muted: #666666;
+  --accent: #cccccc;
+  --border: #e0e0e0;
+}
+}

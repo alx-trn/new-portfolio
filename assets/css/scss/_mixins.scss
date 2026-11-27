@@ -1,0 +1,89 @@
+﻿// Portfolio Mixins
+
+// Transitions
+@mixin transition($property: all, $duration: $motion-normal, $ease: ease-out) {
+  transition: $property $duration $ease;
+}
+
+// Flex utilities
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Button base
+@mixin button-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border: 1px solid $portfolio-border-subtle;
+  background: transparent;
+  color: $portfolio-text-main;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: $radius-md;
+  cursor: pointer;
+  @include transition;
+
+  &:hover {
+    background: $portfolio-bg-surface;
+    border-color: $portfolio-text-muted;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $portfolio-accent-primary;
+  }
+}
+
+// Card base
+@mixin card-base {
+  background: $portfolio-bg-card;
+  border: 1px solid $portfolio-border-subtle;
+  border-radius: $radius-lg;
+  padding: $gutter-lg;
+  @include transition;
+}
+
+// Glass effect
+@mixin glass-effect {
+  background: rgba($portfolio-bg-surface, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba($portfolio-border-subtle, 0.5);
+}
+
+// Responsive utilities
+@mixin mobile-only {
+  @media (max-width: #{$breakpoint-mobile - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media (min-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+// Text utilities
+@mixin text-muted {
+  color: $portfolio-text-muted;
+}
+
+@mixin text-accent {
+  color: $portfolio-accent-primary;
+}

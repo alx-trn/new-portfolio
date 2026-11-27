@@ -1,0 +1,29 @@
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin transition($values...) {
+  transition: $values;
+}
+
+@mixin hover-scale($scale: 1.05) {
+  @include transition(transform $motion-normal);
+  &:hover {
+    transform: scale($scale);
+  }
+}
+
+@mixin slide-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUp 0.6s ease-out forwards;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
